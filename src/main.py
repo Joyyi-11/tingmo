@@ -1,8 +1,8 @@
-"""听墨 CLI.
+"""撷声 CLI.
 
 Usage:
-    tingmo https://www.xiaoyuzhoufm.com/episode/xxx
-    tingmo https://www.xiaoyuzhoufm.com/episode/xxx -o output/
+    xiesheng https://www.xiaoyuzhoufm.com/episode/xxx
+    xiesheng https://www.xiaoyuzhoufm.com/episode/xxx -o output/
 """
 
 import argparse
@@ -29,7 +29,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%H:%M:%S",
 )
-logger = logging.getLogger("tingmo")
+logger = logging.getLogger("xiesheng")
 
 
 def build_output_markdown(doc: OutputDoc) -> str:
@@ -61,7 +61,7 @@ def build_output_markdown(doc: OutputDoc) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="听墨 - 输入小宇宙播客单集链接，输出结构化 Markdown 文稿"
+        description="撷声 - 输入小宇宙播客单集链接，输出结构化 Markdown 文稿"
     )
     parser.add_argument("url", help="小宇宙播客单集链接")
     parser.add_argument("-o", "--output", default="output", help="输出目录 (默认: output/)")

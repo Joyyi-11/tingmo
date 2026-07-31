@@ -1,4 +1,6 @@
-# 听墨（Tingmo）
+# 撷声（Xiesheng）
+
+> 撷声，意为「采撷声音里的精华」，把播客中值得留存的内容，转写、校订、提炼成结构化笔记。
 
 面向小宇宙播客的低成本结构化文稿生成工具。输入单集链接，自动完成节目抓取、音频下载、本地转写、说话人区分和 LLM 内容整理，最终输出适合阅读、编辑和引用的 Markdown 文稿。
 
@@ -6,7 +8,7 @@
 
 现有播客转录服务通常采用按月订阅或有限免费额度。对于只需要偶尔处理单期节目的人，这意味着持续付费；只调用 Whisper 又只能得到原始逐字稿，仍要人工处理错字、口语、专名、说话人和内容结构。
 
-听墨把计算量最大的语音转写放在本地完成，只把文本校订和内容提炼交给 LLM。这样既避免持续订阅，也把单期 API 支出控制在较低水平，同时保留可回查的原始转录。
+撷声把计算量最大的语音转写放在本地完成，只把文本校订和内容提炼交给 LLM。这样既避免持续订阅，也把单期 API 支出控制在较低水平，同时保留可回查的原始转录。
 
 ## 功能
 
@@ -57,10 +59,10 @@ pip install -e .
 [Environment]::SetEnvironmentVariable("LLM_BASE_URL", "https://voltapi.ai/v1", "User")
 
 # 转录播客
-tingmo https://www.xiaoyuzhoufm.com/episode/xxxxx
+xiesheng https://www.xiaoyuzhoufm.com/episode/xxxxx
 
 # 切换到 DeepSeek V4 Flash
-tingmo https://www.xiaoyuzhoufm.com/episode/xxxxx --llm-provider deepseek
+xiesheng https://www.xiaoyuzhoufm.com/episode/xxxxx --llm-provider deepseek
 ```
 
 ## 前置依赖

@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 def download_audio(url: str, output_dir: Path | None = None) -> Path:
     """Download audio file from URL. Returns path to downloaded file."""
     if output_dir is None:
-        output_dir = Path(tempfile.gettempdir()) / "tingmo-audio"
+        output_dir = Path(tempfile.gettempdir()) / "xiesheng-audio"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     ext = _guess_extension(url)
